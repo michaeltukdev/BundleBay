@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CategoriesResource\Pages;
 use App\Filament\Resources\CategoriesResource\RelationManagers;
 use App\Models\Categories;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -60,6 +61,7 @@ class CategoriesResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

@@ -23,7 +23,15 @@
     }
 
     p {
-        @apply text-base text-secondary-text font-light
+        @apply text-sm text-secondary-text font-light
+    }
+    
+    .resource-title {
+        @apply mb-1.5 text-sm font-normal leading-normal text-primary-text;
+    }
+
+    .resource {
+        @apply p-5 bg-container rounded-lg shadow-lg mb-7
     }
 
     /* .category {
