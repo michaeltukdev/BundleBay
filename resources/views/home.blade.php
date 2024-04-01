@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-    <title>Home</title>
+@section('content')
+    <h1>Home</h1>   
+@endsection
 
-    @vite('resources/css/app.css')
-</head>
-
-<body>
-    <div class="background"></div>
-
-    <header>
-        <x-navigation />
-    </header>
-</body>
-
-</html>

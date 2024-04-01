@@ -1,4 +1,4 @@
-<nav class="mt-10">
+<nav class="mt-10 mb-20">
     <div class="container">
         <div class="flex items-center justify-between">
             <ul>
