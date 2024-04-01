@@ -19,7 +19,7 @@ class CategoriesResource extends Resource
 {
     protected static ?string $model = Categories::class;
 
-    protected static ?string $navigationGroup = 'Managing';
+    protected static ?string $navigationGroup = 'Resources';
 
     protected static ?string $navigationIcon = 'heroicon-o-archive-box';
 

@@ -19,7 +19,7 @@ class LanguagesResource extends Resource
 {
     protected static ?string $model = Languages::class;
 
-    protected static ?string $navigationGroup = 'Managing';
+    protected static ?string $navigationGroup = 'Resources';
 
     protected static ?string $navigationIcon = 'heroicon-o-language';
 
