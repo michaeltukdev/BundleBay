@@ -7,10 +7,12 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-background">
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body>
+    <div class="background"></div>
+
+    <header>
+        <x-navigation />
+    </header>
 </body>
 
 </html>
