@@ -34,9 +34,13 @@ class LanguagesResource extends Resource
             ->schema([
                 TextInput::make('language')
                     ->label('Language')
+                    ->unique()
+                    ->string()
                     ->required(),
                 TextInput::make('slug')
                     ->label('Slug')
+                    ->unique()
+                    ->string()
                     ->required(),
             ]);
     }
@@ -46,7 +50,8 @@ class LanguagesResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('language')
-                    ->label('Language'),
+                    ->label('Language')
+                    ->searchable(),
                 TextColumn::make('slug')
                     ->label('Slug'), 
             ])
