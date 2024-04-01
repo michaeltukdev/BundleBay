@@ -10,4 +10,26 @@ class Resources extends Model
     use HasFactory;
 
     protected $table = 'resources';
+
+    protected $fillable = [
+        'name',
+        'summary',
+        'slug',
+        'category_id',
+        'language_id',
+        'github_link',
+        'website_link',
+        'content',
+        'price',
+    ];
+    
+    public function categories()
+    {
+        return $this->belongsTo(Categories::class, 'category_id');
+    }
+
+    public function languages()
+    {
+        return $this->belongsTo(Languages::class, 'language_id');
+    }
 }
