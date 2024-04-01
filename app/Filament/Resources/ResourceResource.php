@@ -5,8 +5,11 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
+use App\Models\Languages;
+use App\Models\Categories;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
@@ -18,8 +21,6 @@ use App\Models\Resources as ResourcesModel;
 use App\Filament\Resources\ResourceResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ResourceResource\RelationManagers;
-use App\Models\Categories;
-use App\Models\Languages;
 
 class ResourceResource extends Resource
 {
@@ -108,6 +109,7 @@ class ResourceResource extends Resource
                     ->searchable(),
                 TextColumn::make('summary')
                     ->label('Summary')
+                    ->limit('50')
                     ->searchable(),
                 TextColumn::make('slug')
                     ->label('Slug'),
@@ -125,6 +127,7 @@ class ResourceResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
