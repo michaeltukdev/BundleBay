@@ -3,7 +3,7 @@
         <div
             @click.prevent="
                 openItem = openItem === {{ $index }} ? null : {{ $index }};
-                $dispatch('selectResource', { resourceId: {{ $resource }} });
+                $dispatch('selectResource', { resourceId: {{ $resource->id }} });
             ">
             <div class="resource" :class="openItem === {{ $index }} ? 'border-red' : ''">
                 <div class="flex items-center justify-between">

@@ -13,7 +13,7 @@ class ResourceDetails extends Component
 
     public function selectResource($resourceId)
     {
-        $this->resource = $resourceId;
+        $this->resource = Resources::find($resourceId);
     }
     
     public function mount($resource = null)
