@@ -7,10 +7,12 @@ use App\Filament\Resources\CategoriesResource\RelationManagers;
 use App\Models\Categories;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Forms;
+use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -35,14 +37,18 @@ class CategoriesResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->label('Name')
-                    ->unique()
+                    ->unique(ignoreRecord: true)
                     ->string()
                     ->required(),
                 TextInput::make('slug')
                     ->label('Slug')
-                    ->unique()
+                    ->unique(ignoreRecord: true)
                     ->string()
                     ->required(),  
+                ColorPicker::make('color')
+                    ->label('Color')
+                    ->rgb()
+                    ->required(),
             ]);
     }
 
@@ -55,6 +61,9 @@ class CategoriesResource extends Resource
                     ->searchable(),
                 TextColumn::make('slug')
                     ->label('Slug'),
+                ColorColumn::make('color')
+                    ->label('Color'),
+                    
             ])
             ->filters([
                 //

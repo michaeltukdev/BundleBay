@@ -14,6 +14,7 @@ class Categories extends Model
     protected $fillable = [
         'name',
         'slug',
+        'color',
     ];
     
     public function resources() {

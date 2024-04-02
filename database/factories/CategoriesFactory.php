@@ -23,6 +23,7 @@ class CategoriesFactory extends Factory
         return [
             'name' => fake()->unique()->word(),
             'slug' => fake()->unique()->word(),
+            'color' => fake()->rgbCssColor(),
         ];
     }
 }

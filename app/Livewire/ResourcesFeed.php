@@ -12,9 +12,17 @@ class ResourcesFeed extends Component
 {
     use WithPagination;
 
+    public function convertRgbToRgba(string $rgbColor): string
+    {
+        $rgbaColor = str_replace('rgb', 'rgba', $rgbColor);
+        $rgbaColor = rtrim($rgbaColor, ')') . ', ' . 0.2 . ')';
+
+        return $rgbaColor;
+    }
+
     public function render()
     {
-        $resources = Resources::with('category', 'languages')->latest()->paginate(5);    
+        $resources = Resources::with('category', 'languages')->latest()->paginate(5);
 
         return view('livewire.resources-feed', ['resources' => $resources]);
     }
