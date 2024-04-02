@@ -15,6 +15,7 @@ class ResourceDetails extends Component
     {
         $this->resource = $resourceId;
     }
+    
     public function mount($resource = null)
     {
         $this->resource = $resource;
