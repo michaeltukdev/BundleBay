@@ -23,7 +23,7 @@ class Resources extends Model
         'price',
     ];
     
-    public function categories()
+    public function category()
     {
         return $this->belongsTo(Categories::class, 'category_id');
     }

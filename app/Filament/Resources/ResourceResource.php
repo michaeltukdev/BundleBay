@@ -40,14 +40,14 @@ class ResourceResource extends Resource
                     ->schema([
                         TextInput::make('name')
                             ->label('Name')
-                            ->unique()
+                            ->unique(ignoreRecord: true)
                             ->string()
                             ->columnSpan(1)
                             ->required(),
 
                         TextInput::make('slug')
                             ->label('Slug')
-                            ->unique()
+                            ->unique(ignoreRecord: true)
                             ->string()
                             ->columnSpan(1)
                             ->required(),
@@ -93,7 +93,6 @@ class ResourceResource extends Resource
                     ->schema([
                         RichEditor::make('content')
                             ->label('Content')
-                            ->unique()
                             ->columnSpanFull()
                             ->required(),
                     ])

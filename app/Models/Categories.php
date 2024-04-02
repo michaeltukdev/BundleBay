@@ -15,4 +15,8 @@ class Categories extends Model
         'name',
         'slug',
     ];
+    
+    public function resources() {
+        $this->hasMany(Resources::class, 'category_id');
+    }
 }
