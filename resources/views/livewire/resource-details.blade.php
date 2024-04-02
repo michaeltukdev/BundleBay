@@ -1,4 +1,4 @@
-<div class="p-8 rounded-lg shadow-xl bg-container">
+<div class="p-8 rounded-lg shadow-xl bg-container">    
     @if ($resource)
         <div class="flex items-center justify-between">
             <div>
