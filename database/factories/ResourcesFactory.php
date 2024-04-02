@@ -24,7 +24,7 @@ class ResourcesFactory extends Factory
         return [
             'name' => fake()->company(),
             'summary' => fake()->sentence(),
-            'slug' => fake()->company(),
+            'slug' => fake()->unique()->company(),
             'category_id' => fake()->randomElement($categories), 
             'language_id' => fake()->randomElement($languages),
             'github_link' => fake()->optional()->url(),

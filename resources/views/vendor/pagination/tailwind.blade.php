@@ -10,7 +10,7 @@
             </a>
         @endif
 
-        <p class="text-primary-text text-base font-normal leading-[normal]">{{ $paginator->currentPage() }} of {{ $paginator->total() }}</p>
+        <p class="text-primary-text text-base font-normal leading-[normal]">{{ $paginator->currentPage() }} of {{ $paginator->lastPage() }}</p>
 
         @if (!$paginator->hasMorePages())
         <span class="p-2.5 rounded-lg bg-container">
