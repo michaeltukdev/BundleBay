@@ -1,4 +1,4 @@
-![Image](https://i.imgur.com/Ppd7ti1.png)
+![Image](https://i.imgur.com/j3NBvK6.png)
         
 ## What is this and why?
 
