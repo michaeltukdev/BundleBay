@@ -1,5 +1,5 @@
 <div>
-    @foreach ($resources as $index => $resource)
+    @foreach ($this->resources() as $resource)
         <div @click.prevent="$dispatch('selectResource', { resourceId: {{ $resource->id }} });">
             <div class="resource">
                 <div class="flex items-center justify-between">
@@ -11,5 +11,5 @@
         </div>
     @endforeach
 
-    {{ $resources->links() }}
+    {{ $this->resources()->links() }}
 </div>

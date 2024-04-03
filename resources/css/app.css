@@ -35,13 +35,8 @@
     }
 
     .resource {
-        @apply p-5 border rounded-lg shadow-lg cursor-pointer bg-container mb-7 border-container;
+        @apply p-5 transition duration-200 border rounded-lg shadow-lg cursor-pointer bg-container mb-7 border-container hover:border-primary;
     }
-
-    .border-red {
-        border: 1px solid #FF6F8C;
-    }
-
 
     .category {
         @apply rounded-full text-xs font-normal py-1.5 px-3.5 bg-[#D0FFC4] text-[#D0FFC4] bg-opacity-40 w-fit

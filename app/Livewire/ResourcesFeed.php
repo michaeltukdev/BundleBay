@@ -4,13 +4,18 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Resources;
+use Livewire\Attributes\On;
+use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cache;
-use Livewire\WithPagination;
+use Livewire\Attributes\Computed;
 
 class ResourcesFeed extends Component
 {
     use WithPagination;
+
+    public $category;
+    public $language;
 
     public function convertRgbToRgba(string $rgbColor): string
     {
@@ -20,10 +25,34 @@ class ResourcesFeed extends Component
         return $rgbaColor;
     }
 
+    #[Computed]
+    public function resources()
+    {
+        return Resources::with('category', 'languages')
+            ->when($this->category, function ($query) {
+                return $query->where('category_id', $this->category);
+            })
+            ->when($this->language, function ($query) {
+                return $query->where('language_id', $this->language);
+            })
+            ->latest()
+            ->paginate(5);
+    }
+
+    #[On('categorySelected')]
+    public function updatedCategory($value)
+    {
+        $this->category = $value;
+    }
+
+    #[On('languageSelected')]
+    public function updatedLanguage($value)
+    {
+        $this->language = $value;
+    }
+
     public function render()
     {
-        $resources = Resources::with('category', 'languages')->latest()->paginate(5);
-
-        return view('livewire.resources-feed', ['resources' => $resources]);
+        return view('livewire.resources-feed');
     }
 }
