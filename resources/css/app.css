@@ -42,6 +42,10 @@
         @apply rounded-full text-xs font-normal py-1.5 px-3.5 bg-[#D0FFC4] text-[#D0FFC4] bg-opacity-40 w-fit
     }
 
+    pre {
+        @apply bg-input rounded-lg p-4
+    }
+
     hr {
         height: 2px;
         border: none;

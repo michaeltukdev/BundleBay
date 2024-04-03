@@ -48,6 +48,7 @@ class ResourcesFeed extends Component
     #[On('languageSelected')]
     public function updatedLanguage($value)
     {
+        $this->resetPage();
         $this->language = $value;
     }
 

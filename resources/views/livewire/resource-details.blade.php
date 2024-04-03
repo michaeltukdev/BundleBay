@@ -1,4 +1,4 @@
-<div class="p-8 rounded-lg shadow-xl bg-container">    
+<div class="p-8 rounded-lg shadow-xl bg-container h-fit">    
     @if ($resource)
         <div class="flex items-center justify-between">
             <div>
@@ -26,5 +26,9 @@
             {!! $resource['content'] !!}
         </div>
 
+    @else
+        <div class="text-center">
+            <p>No resource selected.</p>
+        </div>
     @endif
 </div>
