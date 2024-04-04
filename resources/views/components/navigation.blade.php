@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="/assets/img/logo.webp" alt="Logo" class="h-8">
+                        <img draggable="false" src="/assets/img/logo.webp" alt="Logo" class="h-6">
                     </a>
                 </li>
             </ul>
