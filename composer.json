@@ -13,6 +13,7 @@
         "blade-ui-kit/blade-icons": "^1.6",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.4",
         "owenvoke/blade-fontawesome": "^2.6"

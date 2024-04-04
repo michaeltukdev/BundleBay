@@ -1,22 +1,18 @@
-<nav class="mt-10 mb-20">
+<nav class="mb-20 mt-7">
     <div class="container">
         <div class="flex items-center justify-between">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img draggable="false" src="/assets/img/logo.webp" alt="Logo" class="h-6">
-                    </a>
-                </li>
-            </ul>
+            <a href="#">
+                <img draggable="false" src="/assets/img/logo.webp" alt="Logo" class="h-6">
+            </a>
+            
+            <div class="flex items-center gap-5">
 
-            <ul class="flex gap-5">
-                <li>
-                    <a class="px-5 py-2.5 border border-solid rounded-lg font-base border-third-text text-third-text" href="#">Suggest a new package</a>
-                </li>
-                <li class="hidden md:block">
-                    <a target="_blank" href="https://github.com/michaeltukdev/BundleBay">@svg('fab-github', 'w-6 h-6 text-third-text hover:text-primary transition')</a>
-                </li>
-            </ul>
+                <livewire:suggestion-modal class="flex items-center justify-center" />
+
+                <a target="_blank" href="https://github.com/michaeltukdev/BundleBay" class="hidden md:block">
+                    @svg('fab-github', 'w-6 h-6 text-third-text hover:text-primary transition')
+                </a>
+            </div>
         </div>
     </div>
 </nav>

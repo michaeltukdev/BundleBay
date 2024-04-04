@@ -1,4 +1,4 @@
-<div class="p-8 rounded-lg shadow-xl bg-container h-fit">    
+<div class="p-8 rounded-lg shadow-xl bg-container h-fit">
     @if ($resource)
         <div class="flex items-center justify-between">
             <div>
@@ -13,19 +13,19 @@
                 @endif
 
                 @if ($resource['website_link'])
-                    <a  target="_blank" href="{{ $resource['website_link'] }}">
+                    <a target="_blank" href="{{ $resource['website_link'] }}">
                         @svg('ri-global-fill', 'h-6 text-secondary-text hover:text-primary transition')
                     </a>
                 @endif
             </div>
         </div>
 
-        <hr class="my-8 text-lg border-3 h-100 text-input"></hr>
+        <hr class="my-8 text-lg border-3 h-100 text-input">
+        </hr>
 
         <div>
             {!! $resource['content'] !!}
         </div>
-
     @else
         <div class="text-center">
             <p>No resource selected.</p>

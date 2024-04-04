@@ -18,17 +18,18 @@ export default {
         DEFAULT: '20px',
       },
     },
-    colors: {
-      'background': '#18181B',
-      'container': '#212125',
-      'input': '#2E2E33',
-      'primary-text': '#FFFFFF',
-      'secondary-text': '#B1B1B1',
-      'third-text': '#979797',
-      'primary': '#FF6F8C', 
-      'secondary': '#E24C6A',
+    extend: {
+      colors: {
+        'background': '#18181B',
+        'container': '#212125',
+        'input': '#2E2E33',
+        'primary-text': '#FFFFFF',
+        'secondary-text': '#B1B1B1',
+        'third-text': '#979797',
+        'primary': '#FF6F8C', 
+        'secondary': '#E24C6A',
+      },
     },
-    extend: {},
   },
   plugins: [],
 }
