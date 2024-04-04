@@ -23,7 +23,8 @@
     
                     <div class="flex items-center justify-between mt-8">
                         <button type="submit" class="px-5 py-2 transition duration-300 rounded-lg text-container bg-primary hover:bg-secondary">Submit Resource</button>
-                        @error('link') <span class="text-sm text-primary">{{ $message }}</span> @enderror     
+                        @error('link') <span class="text-sm text-primary">{{ $message }}</span> @enderror   
+                        @if (session('saved')) <span class="text-sm text-green-400">{{ session('saved') }}</span> @endif  
                     </div>
                 </form>
             </div>
