@@ -13,5 +13,10 @@ class Suggestions extends Model
 
     protected $fillable = [
         'link',
+        'approved',
+    ];
+
+    protected $casts = [
+        'approved' => 'boolean',
     ];
 }

@@ -1,4 +1,4 @@
-<div>
+<div x-data>
     @forelse ($this->resources() as $resource)
         <div @click.prevent="$dispatch('selectResource', { resourceId: {{ $resource->id }} });">
             <div class="resource">

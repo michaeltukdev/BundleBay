@@ -1,6 +1,6 @@
 <div class="p-8 rounded-lg shadow-xl bg-container h-fit">
     @if ($resource)
-        <div class="flex items-center justify-between">
+        <div x-transition.duration.500ms class="flex items-center justify-between">
             <div>
                 <p class="resource-title">{{ $resource['name'] }}</p>
                 <p>{{ $resource['summary'] }}</p>
