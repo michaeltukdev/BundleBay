@@ -19,8 +19,28 @@ My friend [Bowu](https://github.com/BowuDev) and I frequently share web resource
 ## Setup Guide
 
 ```bash
-Soon
+git clone https://github.com/michaeltukdev/BundleBay.git
+
+cd BundleBay
+
+composer install
+
+rename .env.example to .env
+
+modify the .env file
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
+
+npm run build or npm run dev
 ```
+
+To deploy to production you will need to modify the User modal (Can access panel).
+
+To access the admin panel run ```php artisan make:filament-user``` and then head to /panel
 
 
 ## Acknowledgements
